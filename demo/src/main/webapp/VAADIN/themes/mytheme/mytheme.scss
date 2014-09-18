@@ -1,0 +1,91 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@import url(http://fonts.googleapis.com/css?family=Dancing+Script);
+
+/* Import the reindeer theme. */
+/* This only allows us to use the mixins defined in it and does not add any styles by itself. */
+@import "../reindeer/reindeer.scss";
+
+/* This contains all of your theme. */
+/* If somebody wants to extend the theme she will include this mixin. */
+@mixin mytheme {
+  /* Include all the styles from the reindeer theme */
+  @include reindeer;
+  
+  /* Global font styles */
+  .v-app,
+  .v-window,
+  .v-popupview-popup,
+  .v-tooltip,
+  .v-app input,
+  .v-app select,
+  .v-app button,
+  .v-app textarea,
+  .v-window input,
+  .v-window select,
+  .v-window button,
+  .v-window textarea,
+  .v-popupview-popup input,
+  .v-popupview-popup select,
+  .v-popupview-popup button,
+  .v-popupview-popup textarea,
+  .v-filterselect-suggestpopup,
+  .v-datefield-popup,
+  .v-contextmenu,
+  .v-Notification,
+  .v-menubar-submenu,
+  .v-drag-element,
+  .v-table-header-drag {
+    font-family: 'Open Sans', sans-serif !important;
+  }
+  
+  .v-ui {
+    background-color: #f2f2f2;
+  }
+  
+  .main-content {
+    margin: 40px 40px;
+  }
+  
+  .header {
+    background: #44A5FF;
+    padding: 20px;
+    border-top: 10px solid #FF0080;
+  }
+  
+  .body {
+    padding: 20px;
+    background-color: white;
+  }
+  
+  .search-label {
+    font-family: 'Dancing Script', cursive;
+    color: white;
+    font-size: 30px;
+    line-height: 30px;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+  
+  .v-autocomplete.search {
+    border: none;
+    padding: 10px !important;
+    border-radius: 0;
+    color: #7C7C7C;
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 20px;
+    font-family: 'Open Sans', sans-serif;
+    
+    &:focus {
+      outline: none;
+    }
+  }
+  
+  .create-page-button {
+  }
+  
+  .wikipedia-page {
+    margin-top: 20px;
+  }
+
+}
